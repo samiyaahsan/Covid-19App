@@ -1,6 +1,5 @@
   
 import React from 'react';
-import './country.css';
 const Country = ({stats}) => {
     return(
         <div className='country'>
