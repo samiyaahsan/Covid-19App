@@ -12,11 +12,11 @@ class App extends React.Component{
     }
   }
   async componentDidMount(){
-    const resp = await fetch('https://api.covid19api.com/countries')
+    const resp = await fetch('https://world-population.p.rapidapi.com/allcountriesname')
     const countries = await resp.json()
     this.setState({countries})
     this.state.countries.forEach(async country => {
-      const resp = await fetch(`https://api.covid19api.com/total/country/${country.Slug}`)
+      const resp = await fetch(`world-population.p.rapidapi.com`)
       const data = await resp.json()
       if(data.length)
       this.setState(prevState => (
